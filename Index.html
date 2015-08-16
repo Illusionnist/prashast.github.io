@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Firstsite</title>
+<!-- the three things that jQuery Mobile needs to work -->
+<link rel="stylesheet" href="jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+  <link rel="stylesheet" href="themes/my-custom-theme.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<script src="jquery-1.11.0.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready( function () {
+if ( !navigator.userAgent.match(/(iPhone|Android)/) ) {
+    $('a.phonelink').click(function(e){
+    alert ("Phone link is prevented from working since this is not a smartphone");
+        e.preventDefault(); 
+    });
+}
+});</script>
+<style type="text/css">
+.popupimg {
+	padding: 0;
+	margin: 0;
+	width: 49%;
+	min-width: 230px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.popuptxt {
+	width: 90%;
+	min-width: 350px;
+	display: inline-block;
+	padding: 40px;
+}
+
+.logo{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+	height:30%;
+	max-height:450px;
+	max-width:450px
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+<!-- Begin home page -->
+<section id="page0" data-role="page" data-theme="c">
+  <header data-role="header">
+    <h1>Everyday Special</h1>
+  </header>
+  <img src="Capture.png" style="align-content:center" class="logo">
+  <div data-role="content" class="content">
+ 
+    <a href="#page1" class="ui-btn">Menu</a>
+     <a href="#page2" class="ui-btn">Past Specials</a>
+      <a href="#page3" class="ui-btn">Book Table</a>
+      <a href="Map.html" rel="external" class="ui-btn" >Location</a> 
+       <a href="tel:01010101" data-role="button" rel="external">Click to Call: 01010101</a>
+        <a href="#page6" class="ui-btn">Development Information</a>
+        <a href="#page7" class="ui-btn">About US</a>
+        <a href="#page8" class="ui-btn">Feed Back</a> </div>
+        
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end home page -->
+<!-- Begin menu page -->
+<section id="page1" data-role="page"  data-theme="c">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <ul data-role="listview">
+    <p>Todays Special</p>
+    <!-- Creates the breakfast list -->
+    <li data-role="collapsible" data-iconpos="left" data-inset="false">
+      <h2>Breakfast</h2>
+      <ul data-role="listview" data-theme="b">
+        <li><a href="#men1-1" data-rel="dialog" data-transition="flip">Fresh Orange Juice</a></li>
+        <li><a href="#men1-2" data-rel="dialog" data-transition="flip">Full English Breakfast</a></li>
+        <li><a href="#men1-3" data-rel="dialog" data-transition="flip">Coffee</a></li>
+      </ul>
+    </li>
+    <li data-role="collapsible" data-iconpos="left" data-inset="false">
+      <!-- Creates the Lunch list -->
+      <h2>Lunch</h2>
+      <ul data-role="listview" data-theme="b">
+        <li><a href="#men2-1" data-rel="dialog" data-transition="flip">Tendon</a></li>
+        <li><a href="#men2-2" data-rel="dialog" data-transition="flip">Soft drinks</a></li>
+        <li><a href="#men2-3" data-rel="dialog" data-transition="flip">Chocolate Cake</a></li>
+      </ul>
+    </li>
+    <!-- Creates the Dinner list -->
+    <li data-role="collapsible" data-iconpos="left" data-inset="false">
+      <h2>Dinner</h2>
+      <ul data-role="listview" data-theme="b">
+        <li><a href="#men3-1" data-rel="dialog" data-transition="flip">Steak</a></li>
+        <li><a href="#men3-2" data-rel="dialog" data-transition="flip">Wine</a></li>
+        <li><a href="#men3-3" data-rel="dialog" data-transition="flip">Vanilla Cake with Ice Cream</a></li>
+      </ul>
+    </li>
+  </ul>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end menu page -->
+<!-- begin past rec page -->
+<section id="page2" data-role="page"  data-theme="c">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <!-- Creates recpie list -->
+  <div data-role="content" class="content">
+    <ul data-role="listview">
+      <h2>Past Specials</h2>
+      <!-- This makes the reciepe page pop up like a dialog page with a fliping transition -->
+      <li><a href="#rec1" data-rel="dialog" data-transition="flip">Gyudon</a></li>
+      <li><a href="#rec2" data-rel="dialog" data-transition="flip">Unadon</a></li>
+      <li><a href="#rec3" data-rel="dialog" data-transition="flip">Katsudon</a></li>
+      <li><a href="#rec4" data-rel="dialog" data-transition="flip">Konohadon</a></li>
+      <li><a href="#rec5" data-rel="dialog" data-transition="flip">Karedon</a></li>
+    </ul>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end past rec page -->
+<!-- begin booking page -->
+<section id="page3" data-role="page"  data-theme="c">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+    <h2>Booking table</h2>
+    <!-- Adds textboxes -->
+    <label for="text-basic">Name:</label>
+    <input type="text" name="text-basic" id="text-basic" value="">
+    <label for="text-basic">Number of People</label>
+    <input type="text" name="text-basic" id="text-basic2" value="">
+    <label for="date">Date:</label>
+    <input type="date" name="date" id="date" value="">
+    <label for="tel">Tel:</label>
+    <input type="tel" name="tel" id="tel" value="">
+    <a href="#" class="ui-btn">Submit</a>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end booking page -->
+<!-- begin click to call page -->
+<!--<section id="page4" data-role="page">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+    <p>Four page!</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section> -->
+<!-- end click to call page -->
+<!-- begin location page -->
+<!--
+<section id="page5" data-role="page">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+    <p>Five page!</p>
+    <div id="map_canvas" style="width:350px;height:350px"></div>
+  
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+-->
+<!-- end location page -->
+<!-- begin devel info page -->
+<section id="page6" data-role="page"  data-theme="c">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+    <p>References
+     <ul>
+    <li>Coffee - Free stock photo of heart, coffee, mug. 2015. Free stock photo of heart, coffee, mug. [ONLINE] Available at: http://www.pexels.com/photo/heart-coffee-mug-cappuccino-6867/. [Accessed 15 August 2015].</li>
+       <li>Chocolate Cake - Free stock photo of chocolate, dessert, brownies. 2015. Free stock photo of chocolate, dessert, brownies. [ONLINE] Available at: http://www.pexels.com/photo/chocolate-dessert-brownies-cake-3666/. [Accessed 15 August 2015].</li>
+       <li>Vanilla Cake - Cheesecake on plate and cup of coffee · Free Stock Photo. 2015. Cheesecake on plate and cup of coffee · Free Stock Photo. [ONLINE] Available at: http://www.pexels.com/photo/cheesecake-on-plate-and-cup-of-coffee-6600/. [Accessed 15 August 2015].</li>
+       <li>Orange Juice - Free stock photo of drink, breakfast, orange juice. 2015. Free stock photo of drink, breakfast, orange juice. [ONLINE] Available at: http://www.pexels.com/photo/drink-breakfast-orange-juice-3642/. [Accessed 15 August 2015].</li>
+       <li>Steak - Free stock photo of food, restaurant, dinner. 2015. Free stock photo of food, restaurant, dinner. [ONLINE] Available at: http://www.pexels.com/photo/food-restaurant-dinner-lunch-3660/. [Accessed 15 August 2015].</li>
+       <li>Softdrink - Free stock photo of alcohol, bar, drinks. 2015. Free stock photo of alcohol, bar, drinks. [ONLINE] Available at: http://www.pexels.com/photo/alcohol-bar-drinks-party-6506/. [Accessed 15 August 2015].</li>
+       <li>Full English Breakfast- File:Full English Breakfast.JPG - Wikimedia Commons. 2015. File:Full English Breakfast.JPG - Wikimedia Commons. [ONLINE] Available at: https://commons.wikimedia.org/wiki/File:Full_English_Breakfast.JPG. [Accessed 15 August 2015].</li>
+       <li>Wine - Free stock photo of alcohol, bar, drinks. 2015. Free stock photo of alcohol, bar, drinks. [ONLINE] Available at: http://www.pexels.com/photo/alcohol-bar-drinks-party-6506/. [Accessed 15 August 2015].</li>
+       <li>Tendon - File:Tendon in Tokyo.jpg - Wikimedia Commons. 2015. File:Tendon in Tokyo.jpg - Wikimedia Commons. [ONLINE] Available at: https://commons.wikimedia.org/wiki/File:Tendon_in_Tokyo.jpg. [Accessed 15 August 2015].</li>
+       <li>unadon - Unadon - Wikipedia, the free encyclopedia. 2015. Unadon - Wikipedia, the free encyclopedia. [ONLINE] Available at: https://en.wikipedia.org/wiki/Unadon#/media/File:Tokyo_Chikuyotei_Unadon01s2100.jpg. [Accessed 15 August 2015].</li>
+       <li>katsudon -Udon - Wikipedia, the free encyclopedia. 2015. Udon - Wikipedia, the free encyclopedia. [ONLINE] Available at: https://en.wikipedia.org/wiki/Udon#/media/File:Udon-M1336.jpg. [Accessed 15 August 2015]. </li>
+       <li>Karedon - Karē – Wikipedia. 2015. Karē – Wikipedia. [ONLINE] Available at: https://de.wikipedia.org/wiki/Kar%C4%93#/media/File:Katsukare-.jpg. [Accessed 15 August 2015].</li>
+       <li>konohadon - Donburi - Wikipedia, the free encyclopedia. 2015. Donburi - Wikipedia, the free encyclopedia. [ONLINE] Available at: https://en.wikipedia.org/wiki/Donburi#/media/File:Oyakodon_003.jpg. [Accessed 15 August 2015].</li>
+  <li>Recipes - www.japanesecooking101.com</li>
+</ul>
+    </p>
+    <br>
+    <p>Additional Feature - Pop up windows and Flip transitions. External plugin used for location maps.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end devel info page -->
+
+
+<!-- begin About US page -->
+<section id="page7" data-role="page"  data-theme="c">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+    <h2>About US</h2>
+    <p> We are a new restaurant which just start the start of year 2016, we time traveled back to earn the money by betting on the races which we know we would win in and then we started this restaurtant of which we create an emipre of in 2016. Your all are esteemed customer who we will treat awefully once we have the money we need and then we will never ever remember your names. So please do come.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end About US page -->
+
+<!-- begin FeedBack page -->
+<section id="page8" data-role="page"  data-theme="c">
+  <header data-role="header"><a href="#page0">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+    <h2>Feed Back</h2>
+    <!-- Adds textboxes -->
+    <label for="text-basic">Name:</label>
+    <input type="text" name="text-basic" id="text-basic1" value="">
+    <label for="text-basic">FeedBack</label>
+    <input type="text" name="text-basic" id="text-basic3" value="">
+    <a href="#" class="ui-btn">Submit</a>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end Feedback page -->
+
+
+<!-- begin rec1 page -->
+<section id="rec1" data-role="page"  data-theme="c">
+  <header data-role="header"><a href="#page2">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+   <!-- Adds images and resizes them to match the dialog box -->
+  <img src="Pics/rec pic/Matsusaka_beef_gyudon_2_by_nmy_in_Tokyo.jpg" class="popupimg">
+    <p>Gyudon
+    <br>
+    Ingredients:
+    <ul>
+    <li>1 medium onion</li>
+    <li>10-12oz (300-350g) beef, thinly sliced</li>
+    <li>1 1/2 cup Dashi</li>
+    <li>4 Tbsp soy sauce</li>
+    <li>3 Tbsp sugar</li>
+    <li>2 Tbsp Sake</li>
+    <li>1 tsp ginger, grated</li>
+    <li>pickled red ginger (Benishouga)</li>
+    <li>steamed rice</li>
+    </ul>
+    <br>
+    Method:
+    Slice onion thinly, and cut sliced beef in 2" width.
+Boil Dashi in a pot and add sliced onion. Cook for 3-4 minutes. Add soy sauce, sugar, and Sake and cook another 3-4 minutes. Add grated ginger.
+Add sliced beef in pot and stir. Cook about 5 minutes.
+Pour meat and sauce over rice and top with pickled red ginger.</p>
+	<br>
+  <p>  Attribute - By nmy from Tokyo (Flickr) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons
+    </p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end rec1 page -->
+<!-- begin rec2 page -->
+<section id="rec2" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page2">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+   <img src="Pics/rec pic/Tokyo_Chikuyotei_Unadon01s2100.jpg" class="popupimg">
+    <p>Unadon
+    <br>
+      Ingredients:
+    <ul>
+    <li>1 fillet of unagi (vacuum-sealed)</li>
+    <li>1 tbsp sake</li>
+    <li>steamed rice</li>
+    <br>
+    Sause
+    <li>1/2 cup (120ml) soy sauce</li>
+    <li>1/3 cup (80ml) mirin</li>
+    <li>4 tbsp sugar</li>
+    <li>2 tbsp sake</li>
+    <li>2 tbsp sake</li>
+    </ul>
+    <br>
+     Method:Preheat oven to 425F (218C.) Cut unagi fillet into 4 pieces and place them on the baking sheet lined with aluminum foil. Sprinkle sake on the surface of the unagi and bake in the oven for 6 to 8 minutes until heated.
+In a small sauce pan, mix all the ingredients of the sauce and bring it to a boil. Simmer for about 10 minutes until slightly thickened.
+Place steamed rice in an individual bowl, sprinkle about a tbsp of sauce over the rice, and top with cooked unagi on top. Pour some sauce on top of the fish. Sprinkle on Sansyo Japanese pepper on top (optional.) Serve immediately.</p>
+<br>
+<p>Attribute - By 663highland (663highland) [GFDL (http://www.gnu.org/copyleft/fdl.html), CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/) or CC BY 2.5 (http://creativecommons.org/licenses/by/2.5)], via Wikimedia Commons </p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end rec2 page -->
+<!-- begin rec3 page -->
+<section id="rec3" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page2">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/Udon-M1336.jpg" class="popupimg">
+    <p>Katsudon<br>
+	<br>
+          Ingredients:
+    <ul>
+    <li>1 Tonkatsu</li>
+    <li>1/4 C Dashi</li>
+    <li>1 Tbsp soy sauce</li>
+    <li>1/2 Tbsp sugar</li>
+    <li>1/2 Tbsp Sake</li>
+    <li>1/2 Tbsp Mirin</li>
+    <li>1-2 eggs</li>
+    <li>green onions, chopped (optional)</li>
+    <li>Steamed Rice</li>
+    <li>roasted seaweed (Nori), thinly sliced</li>
+    </ul>
+    <br>
+    Method:Cut Tonkatsu into strips, set aside.
+In a small frying pan, add Dashi, soy sauce, sugar, Sake, and Mirin, and cook at medium heat until it boils. Reduce heat to low-medium.
+Add cut Tonkatsu to the sauce in the pan. Beat egg(s) in a small bowl and pour over the Tonkatsu. Cover and cook for 1 minute. Sprinkle chopped green onions if you like.
+Slide Tonkatsu and egg(s) with sauce over rice in a bowl.
+Sprinkle sliced Nori on top.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end rec3 page -->
+<!-- begin rec4 page -->
+<section id="rec4" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page2">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/rec pic/Oyakodon_003.jpg" class="popupimg">
+    <p>Konohadon
+    <br>
+    Ingredients:
+    <ul>
+    <li>2 cups cooked rice</li>
+    <li>4 eggs</li>
+    <li>50g fish cake( KAMABOKO), cut into thinly slice</li>
+    <li>2 shiitake mushrooms, cut into thinly slice</li>
+    <li>½ onion, cut into thinly slice</li>
+    <li>2 green onion cut into chopped</li>
+    <li>200 cc dashi stock</li>
+    <li>1 tbsp soy sauce</li>
+    <li>1 tbsp sake</li>
+    <li>1 tbsp mirin</li>
+    <li>1 tbsp sugar</li>
+    </ul>
+    <br>
+    Method: Pour the dashi stock into a pan, and over a high heat, bring to the boil, add the sake, mirin, sugar, and soy sauce.
+Add the onion, shiitake mushrooms, and fish cake, and simmer for about 2-3 min. In a small bowl, beat egg to blend.
+Reduce the heat to a low, pour the egg in a pan, cover and cook just until egg are softly, and set 2-3 min.
+Place the cooked rice in a bowl, top equally with egg mixture, including soup, sprinkles the green onion.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end rec4 page -->
+<!-- begin rec5 page -->
+<section id="rec5" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page2">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/rec pic/Katsukare-.jpg" class="popupimg">
+    <p>Karedon
+    Ingredients:
+    <ul>
+    <li>Curry and Rice</li>
+    <li>Tonkatsu</li>
+    </ul>
+    <br>
+    Method: Make Curry according to our Curry and Rice recipe. Let it simmer until ready.
+Make Tonkatsu according to our Tonkatsu recipe. Cut into 1/2" strips.
+Put rice on the plate and place Tonkatsu over rice. Then pour curry over it.</p>
+<br>
+<p>Attributte - By Hykw-a4 (from ja:image:Katsukare-.jpg) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end rec5 page -->
+
+<!-- begin OJ page -->
+<section id="men1-1" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/drink-breakfast-orange-juice.jpg" class="popupimg">
+    <p>Orange Juice - Freshly squeezed Orange Juice.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end OJ page -->
+
+<!-- begin English break page -->
+<section id="men1-2" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/Full_English_Breakfast.JPG" class="popupimg">
+    <p>English Breakfast - A complete english breakfast consisting of grilled mushrooms, crispy. grill sausages, baked beans, freshly roast tomatoes and an egg omelte</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end English break page -->
+
+<!-- begin Coffee page -->
+<section id="men1-3" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/art-heart-caffeine-coffee.jpg" class="popupimg">
+    <p>Coffee - Freshly brewed coffee consisting of fresh grinded coffee beans and pasturised milk.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end Coffee page -->
+
+<!-- begin tendon page -->
+<section id="men2-1" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/rec pic/Tendon_in_Tokyo.jpg" class="popupimg">
+    <p>A japenese dish consisting of battered and deep friend seafood with rice.</p>
+    <br>
+    <p> Attribute - By Jimmy Yao (originally posted to Flickr as IMG_1726) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end tendon page -->
+
+<!-- begin softd page -->
+<section id="men2-2" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/Softdrinks.jpg" class="popupimg">
+    <p>A glass of carbonated drink of your choice</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end softd page -->
+
+<!-- begin choc page -->
+<section id="men2-3" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/chocolate-dessert-brownies-cake.jpg" class="popupimg">
+    <p>A slice of chocolate cake.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end choc page -->
+
+<!-- begin steak page -->
+<section id="men3-1" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/food-restaurant-dinner-lunch.jpg" class="popupimg">
+    <p>A cut of meat which cooked to way which you prefer. Medium, rare or well cooked.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end steak page -->
+
+<!-- begin mwine page -->
+<section id="men3-2" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/red-couple-night-romantic.jpg" class="popupimg">
+    <p>A nice bottle of wine to go with your steak.</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end wine page -->
+
+<!-- begin van cake page -->
+<section id="men3-3" data-role="page" data-theme="c">
+  <header data-role="header"><a href="#page1">Back</a>
+    <h1>Everyday Special</h1>
+  </header>
+  <div data-role="content" class="content">
+  <img src="Pics/food-plate-coffee-cup.jpg" class="popupimg">
+    <p>A slice of Vanilla cake with your choice of ice cream to go with it</p>
+  </div>
+  <footer data-role="footer">
+    <h1>Everyday Special</h1>
+  </footer>
+</section>
+<!-- end van cake page -->
+
+
+</body>
+</html>
